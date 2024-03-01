@@ -47,17 +47,18 @@ def main():
         rainfall = st.number_input("Rainfall in mm",0.0,100000.0)
         moisture=st.number_input("Soil moisture",10,100)
 
-        feature_list = [N, P, K, temp, humidity, ph, rainfall]
+        feature_list = [N, P, K, temp, humidity, ph, rainfall,moisture]
         single_pred = np.array(feature_list).reshape(1,-1)
         
         if st.button('Predict'):
-
-            loaded_model = load_model('model.pkl')
+            loaded_model = load_model('model2.pkl')
             prediction = loaded_model.predict(single_pred)
             col1.write('''
-		    ## Results 🔍 
-		    ''')
-            col1.success(f"{prediction.item().title()} are recommended by the A.I for your farm.")
+            ## Results 🔍 
+            ''')
+            # Convert the integer prediction to string and then capitalize the first letter
+            col1.success(f"{str(prediction.item()).title()} are recommended by the A.I for your farm.")
+
     #   code for html ☘️ 🌾 🌳 👨‍🌾  🍃
 
 
