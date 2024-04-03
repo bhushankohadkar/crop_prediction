@@ -85,13 +85,13 @@ def main():
     with col1:
         with st.expander(" :red[ℹ️ Information]", expanded=True):
             st.write(""":Black[
-            Crop recommendation is one of the most important aspects of precision agriculture. Crop recommendations are based on a number of factors. Precision agriculture seeks to define these criteria on a site-by-site basis in order to address crop selection issues. While the "site-specific" methodology has improved performance, there is still a need to monitor the systems' outcomes.Precision agriculture systems aren't all created equal. 
-            However, in agriculture, it is critical that the recommendations made are correct and precise, as errors can result in significant material and capital loss.]
+            **Crop recommendation is one of the most important aspects of precision agriculture. Crop recommendations are based on a number of factors. Precision agriculture seeks to define these criteria on a site-by-site basis in order to address crop selection issues. While the "site-specific" methodology has improved performance, there is still a need to monitor the systems' outcomes.Precision agriculture systems aren't all created equal. 
+            However, in agriculture, it is critical that the recommendations made are correct and precise, as errors can result in significant material and capital loss.**]
 
             """)
         '''
         ## How does it work ❓ 
-        Complete all the parameters and the machine learning model will predict the most suitable crops to grow in a particular farm based on various parameters
+        **Complete all the parameters and the machine learning model will predict the most suitable crops to grow in a particular farm based on various parameters**
         '''
 
     with col2:
@@ -116,7 +116,7 @@ def main():
 		    ## Results 🔍 
 		    ''')
             # col1.success(original_label,"are recommended by the A.I for your farm.")
-            col1.write(f"{original_label[0]} is recommended by the A.I for your farm.")
+            col1.write(f"**{original_label[0]} is recommended by the A.I for your farm.**",font_size=60)
 
         # st.subheader(" Find out the most suitable crop to grow in your farm 👨‍🌾")
         # N = st.number_input("Nitrogen", 1,10000)
