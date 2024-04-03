@@ -39,5 +39,7 @@ This dataset was build by augmenting datasets of rainfall, climate and fertilize
 # Demo
 Live Demo: https://crop-prediction-bhushankohadkar.streamlit.app/#6b320e7f
 
-![](https://i.imgur.com/TnsSPQy.png)
+<p align="center">
+<img src="UI.jpg" />
+</p>
 
