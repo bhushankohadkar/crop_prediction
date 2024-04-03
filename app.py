@@ -7,17 +7,6 @@ import warnings
 import base64
 import warnings
 
-# Filter out the specific warning you want to ignore
-import warnings
-
-# Filter out the specific resource warnings you want to ignore
-warnings.filterwarnings("ignore", category=ResourceWarning)
-
-# Your code here
-
-# Reset warnings filter to default after the code block where you want to ignore the warning
-warnings.resetwarnings()
-
 
 # st.set_page_config(page_title="Crop Recommender", page_icon="🌿", layout='centered', initial_sidebar_state="collapsed")
 
