@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score,f1_score
 
 df = pd.read_csv(r"FinalData.csv")
 
-features = df[['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall','soil_moisture']]
+features = df[['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall']]
 target = df['label']
 
 X_train, X_test, Y_train, Y_test = train_test_split(features, target, test_size=0.2, random_state=2)
@@ -29,7 +29,7 @@ print(grid.best_score_)
 print(grid.best_estimator_)
 print(grid.best_params_)
 
-dt=DecisionTreeClassifier(max_depth=19)
+dt=DecisionTreeClassifier(max_depth=22)
 dt.fit(X_train,Y_train)
 
 Y_pred_encoded = dt.predict(X_test)

@@ -3,16 +3,6 @@ import pandas as pd
 import numpy as np
 import os
 import pickle
-import warnings
-import base64
-import warnings
-
-
-# st.set_page_config(page_title="Crop Recommender", page_icon="🌿", layout='centered', initial_sidebar_state="collapsed")
-
-# def load_model(modelfile):
-# 	loaded_model = pickle.load(open(modelfile, 'rb'))
-# 	return loaded_model
 import base64
 
 
@@ -57,7 +47,7 @@ def set_background(png_file, blur_radius=5):
 
 
 st.set_page_config(page_title="Crop Recommender", page_icon="🌿", layout='wide', initial_sidebar_state="collapsed")
-set_background('image.png', blur_radius=6)  # Adjust blur_radius as needed
+set_background('image.png', blur_radius=10)  # Adjust blur_radius as needed
 
 
 def main():
@@ -113,9 +103,8 @@ def main():
         humidity = st.number_input("Humidity in %", 0.0, 100000.0)
         ph = st.number_input("Ph", 0.0, 100000.0)
         rainfall = st.number_input("Rainfall in mm", 0.0, 100000.0)
-        moisture = st.number_input("Soil moisture", 10, 100)
 
-        feature_list = [N, P, K, temp, humidity, ph, rainfall, moisture]
+        feature_list = [N, P, K, temp, humidity, ph, rainfall]
         single_pred = np.array(feature_list).reshape(1, -1)
 
         if st.button('Predict'):
